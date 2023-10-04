@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+ 
+     <!-- Include Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+ 
+     <!-- Custom Styles -->
+     <link rel="stylesheet" href="/static/style.css">
+     
+     <!-- Include Google Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+ 
+ </head>
+ <body>
+ 
+     <!-- Header Section -->
+     <header class="container-fluid bg-primary py-3">
+         <div class="container">
+             <h1 class="text-white fw-bold text-center">Text Summarization and Audio Summary</h1>
+             <p class="lead text-white text-center">Retrieve best summary for your text</p>
+         </div>
+     </header>
+ 
+     <!-- Main Content Section -->
+     <main class="container my-5">
+         <div class="row">
+             <div class="col-md-6 mb-5">
+                 <h2 class="text-primary mb-4">Original Text</h2>
+                 <p class="originalTxt text-dark bg-light">{{original_txt}}</p>
+                 <button class="btn btn-outline-primary mt-3" type ="submit">Words: {{len_orig_text}}</button>
+             </div>
+             <div class="col-md-6 mb-5">
+                 <h2 class="text-primary mb-4">Summary</h2>
+                 <p class="summaryTxt text-dark bg-light">{{summary}}</p>
+                 <button class="btn btn-outline-primary mt-3" type ="submit">Words: {{len_summary}}</button>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-md-12">
+                 <button class="btn btn-primary" onclick="window.location.href='/download'" type="button">Audio Summary</button>
+             </div>
+         </div>
+     </main>
+ 
+     <!-- Footer Section -->
+     <footer class="container-fluid bg-secondary py-3">
+         <div class="container text-center">
+            <p class="text-light mb-0">Copyright © 2023 Text Summarization
+             </p>
+         </div>
+     </footer>
+ 
+     <!-- Include Bootstrap JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+ 
+ </body>
+ </html>
+ 
+
+
